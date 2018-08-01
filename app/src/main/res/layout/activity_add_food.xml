@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddFoodActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/image_launcher" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etFood"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Food Name"
+                        android:textSize="26dp" />
+
+                    <Spinner
+                        android:id="@+id/spin_catg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/country_arrays"
+                        android:gravity="center"
+                        android:prompt="@string/country_prompt"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="City"
+                    android:textSize="26dp" />
+
+                <EditText
+                    android:id="@+id/etAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Address"
+                    android:textSize="26dp" />
+
+                <EditText
+                    android:id="@+id/etPhoneNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone Num"
+                    android:inputType="number"
+                    android:textSize="26dp" />
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:gravity="center"
+                   android:orientation="horizontal">
+
+                   <EditText
+                       android:id="@+id/etOpen"
+                       android:layout_width="200dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="center"
+                       android:hint="open Hours"
+                       android:textAlignment="center"
+                       android:textSize="26dp" />
+                   <TextView
+                       android:layout_width="50dp"
+                       android:gravity="center"
+                       android:textAlignment="center"
+                       android:textSize="26dp"
+                       android:layout_height="wrap_content"
+                       android:text=" : "/>
+
+                   <EditText
+                       android:id="@+id/etClose"
+                       android:layout_width="200dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="center"
+                       android:hint="close Hours"
+                       android:textAlignment="center"
+                       android:textSize="26dp" />
+               </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etDetailes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="More details"
+                    android:textSize="26dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnAdd_img"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_action_camera"
+                            android:text="add image" />
+
+                        <ImageView
+                            android:id="@+id/image_food"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:maxWidth="350dp"
+                            android:maxHeight="350dp"
+                            android:scaleType="fitCenter"
+                            android:layout_marginLeft="3dp"
+                            android:src="@drawable/ic_action_camera" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBar1"
+                            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+                <Button
+                    android:id="@+id/btn_save_de"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="save" />
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
